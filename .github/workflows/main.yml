@@ -1,0 +1,15 @@
+name: new workflow
+on:
+ push:
+  branches:
+    - main
+ workflow_dispatch:
+jobs:
+ build:
+  runs-on: ubuntu_latest
+  steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+    - name: build
+      run: echo "hi"
+    
